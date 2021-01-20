@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/loginstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Yantramanav'>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <title>Login - SIWIKODE</title>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["username"].value;
+            var y = document.forms["myForm"]["pass"].value;
+
+            if (x == "admin", y == "kelompok7") {
+                alert("Login Success!")
+                return true
+            }
+            else {
+                alert("Username atau Password Salah!")
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="siwikode-top">
+        <h1 class="text-center" >Sistem Informasi Wisata Kota Depok - SIWIKODE</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow " id="mainNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">SIWIKODE</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active mr-3" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="rekreasi.html">Wisata Rekreasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="kuliner.html">Wisata Kuliner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="register.html">Registrasi</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-success my-2 my-sm-0 DM2 login-button" href="index_login.html">Login</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- <ol class="breadcrumb">
+        <li class="breadcrumb-item active ml-auto" aria-current="page">Home</li>
+    </ol> -->
+    <div class="container-fluid">
+      <form class="login shadow putih p-5" name="myForm" action="admin-kelola-rekreasi.html" onsubmit="return validateForm()" method="post">
+          
+          <legend class="text-center text-danger">Login</legend>
+
+          <div class="form-group row">
+              <input type="text"  class="form-control" id="username" placeholder="Username" name="username">
+          </div>
+
+          <div class="form-group row">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+          </div>
+
+          <div class="text-center">
+              <button type="submit" class="btn btn-primary" onclick="login()">Submit</button>
+              <button type="reset" class="btn btn-danger">Cancel</button>
+          </div>
+      </form>
+    </div>
+    <div class="container-fluid footer-kelompok">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-center text-white p-3 develop-footer">Develop By Kelompok 7 TI-02 @STT NF</h4>
+                <h4 class="text-center text-white p-3 kelompok-footer">
+                    Adriansyah Mahesa Wicaksana<br>
+                    Dea Rhamanti<br>
+                    Febi Febiyanti<br>
+                    Maya Catherine Yolanda
+                </h4>
+            </div>          
+        </div>      
+    </div>
+</body>
+</html>
